@@ -51,7 +51,7 @@ Si deseas contribuir al proyecto en el repositorio [gestor-tareas](https://githu
 
 2. **Clona tu fork** en tu máquina local:
      ```bash
-     git clone [https://github.com/tuusuario/gestor-tareas.git](https://github.com/tareas-pruebas-software/gestor-tareas)
+     git clone https://github.com/tuusuario/gestor-tareas.git
      ```
 
 3. **Crea una nueva rama** para tu funcionalidad o corrección:
