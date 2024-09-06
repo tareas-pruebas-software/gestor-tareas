@@ -33,7 +33,12 @@ def list_tasks(status=None, label=None, due_date=None):
     for task in tasks:
         if (status and task["status"] != status) or (label and task["label"] != label or (due_date and datetime.strptime(task["due_date"], '%Y-%m-%d') > due_date)):
             continue
-        print(task)
+        print("Tareas:\n")
+        print(f"Título: {task['title']}, 
+              Descripción: {task['description']}, 
+              Vencimiento: {task['due_date']}, 
+              Estado: {task['status']}, 
+              Etiqueta: {task['label']}")
 
 def update_task(title, new_status=None, new_due_date=None, new_label=None):
     tasks = load_tasks()
@@ -47,6 +52,11 @@ def update_task(title, new_status=None, new_due_date=None, new_label=None):
                 task["label"] = new_label
             save_tasks(tasks)
             print(f"Tarea '{title}' actualizada con éxito.")
+            print(f"Título: {task['title']}, 
+                Descripción: {task['description']}, 
+                Vencimiento: {task['due_date']}, 
+                Estado: {task['status']}, 
+                Etiqueta: {task['label']}")
             return
     print(f"Tarea '{title}' no encontrada.")
 
@@ -86,4 +96,7 @@ def list_archived_tasks():
 
         print("Tareas archivadas:")
         for task in archived_tasks:
-            print(f"Título: {task['title']}, Vencimiento: {task['due_date']}, Estado: {task['status']}, Etiqueta: {task['label']}")
+            print(f"Título: {task['title']}, 
+                  Vencimiento: {task['due_date']}, 
+                  Estado: {task['status']}, 
+                  Etiqueta: {task['label']}")
