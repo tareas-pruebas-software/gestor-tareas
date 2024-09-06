@@ -1,6 +1,6 @@
 import json
 import os
-from datetime import datetime
+
 
 TASKS_FILE = "tasks/tasks.json"
 ARCHIVED_TASKS_FILE = "tasks/archived_tasks.json"
@@ -74,3 +74,16 @@ def archive_completed_tasks():
     
     save_tasks(tasks)
     print("Tareas completadas archivadas con éxito.")
+
+def list_archived_tasks():
+        try:
+            with open(ARCHIVED_TASKS_FILE, 'r') as file:
+                archived_tasks = json.load(file)
+        except (FileNotFoundError, json.JSONDecodeError):
+            archived_tasks = []
+            print("No se encontraron tareas archivadas.")
+            return
+
+        print("Tareas archivadas:")
+        for task in archived_tasks:
+            print(f"Título: {task['title']}, Vencimiento: {task['due_date']}, Estado: {task['status']}, Etiqueta: {task['label']}")

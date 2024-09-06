@@ -19,7 +19,8 @@ def main():
             print("\n3. Actualizar Tarea")
             print("\n4. Eliminar Tarea")
             print("\n5. Archivar Tareas Completadas")
-            print("\n6. Salir")
+            print("\n6. Ver Tareas Archivadas")
+            print("\n7. Salir")
             option = input("Seleccione una opción: ")
 
             if option == "1":
@@ -66,6 +67,8 @@ def main():
                 logging.info(f"Tareas completadas archivadas por {username}.")
             
             elif option == "6":
+                task_manager.list_archived_tasks()
+            elif option == "7":
                 print("Cerrando sesión...")
                 logging.info(f"Usuario {username} cerró sesión.")
                 break
