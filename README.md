@@ -50,9 +50,8 @@ Si deseas contribuir al proyecto en el repositorio [gestor-tareas](https://githu
    - Haz clic en el botón "Fork" en la esquina superior derecha de la página.
 
 2. **Clona tu fork** en tu máquina local:
-   - Reemplaza `tuusuario` con tu nombre de usuario en GitHub en el siguiente comando:
      ```bash
-     git clone https://github.com/tuusuario/gestor-tareas.git
+     git clone [https://github.com/tuusuario/gestor-tareas.git](https://github.com/tareas-pruebas-software/gestor-tareas)
      ```
 
 3. **Crea una nueva rama** para tu funcionalidad o corrección:
