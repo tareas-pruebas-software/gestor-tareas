@@ -23,7 +23,7 @@ El **Gestor de Tareas** es una aplicación de línea de comandos diseñada para 
 
 2. Ejecuta el programa:
 
-  ```
+  ```bash
   python3 main.py
   ```
 ## Uso
