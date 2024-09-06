@@ -7,3 +7,12 @@
 2024-09-06 16:35:01,815 - INFO - Tarea 'Tarea 1' añadida por Vicente.
 2024-09-06 16:36:02,617 - INFO - Tarea 'Tarea 1' actualizada por Vicente.
 2024-09-06 16:36:25,270 - INFO - Tarea 'Tarea 1' actualizada por Vicente.
+2024-09-06 16:41:12,708 - INFO - Usuario Vicente ha iniciado sesión.
+2024-09-06 16:42:55,234 - INFO - Usuario Vicente ha iniciado sesión.
+2024-09-06 16:44:43,469 - WARNING - Intento de inicio de sesión fallido para usuario 2.
+2024-09-06 16:44:45,276 - WARNING - Intento de inicio de sesión fallido para usuario Vicente.
+2024-09-06 16:44:47,637 - WARNING - Intento de inicio de sesión fallido para usuario [A[A.
+2024-09-06 16:44:49,547 - INFO - Usuario Vicente ha iniciado sesión.
+2024-09-06 16:45:39,417 - INFO - Usuario Vicente ha iniciado sesión.
+2024-09-06 16:47:13,023 - INFO - Tareas completadas archivadas por Vicente.
+2024-09-06 16:47:44,670 - INFO - Usuario Vicente cerró sesión.

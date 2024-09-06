@@ -1,7 +1,7 @@
 import auth
 import task_manager
 import logging
-
+from datetime import datetime
 # Configuración del log
 logging.basicConfig(filename='logs/app.log', level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
@@ -33,7 +33,20 @@ def main():
             elif option == "2":
                 status = input("Filtrar por estado (pending, in_progress, completed) o presione Enter: ")
                 label = input("Filtrar por etiqueta o presione Enter: ")
-                task_manager.list_tasks(status, label)
+                due_date = input("Filtrar por fecha de vencimiento antes de (YYYY-MM-DD) o presione Enter: ")
+
+                # Validar formato de fecha
+                try:
+                    if due_date:
+                        due_date = datetime.strptime(due_date, '%Y-%m-%d')
+                    else:
+                        due_date = None
+                except ValueError:
+                    print("Formato de fecha inválido, use YYYY-MM-DD.")
+                    due_date = None
+
+                task_manager.list_tasks(status, label, due_date)
+
             
             elif option == "3":
                 title = input("Título de la tarea a actualizar: ")

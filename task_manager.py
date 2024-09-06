@@ -1,5 +1,6 @@
 import json
 import os
+from datetime import datetime
 
 TASKS_FILE = "tasks/tasks.json"
 ARCHIVED_TASKS_FILE = "tasks/archived_tasks.json"
@@ -27,10 +28,10 @@ def add_task(title, description, due_date, label):
     save_tasks(tasks)
     print(f"Tarea '{title}' añadida con éxito.")
 
-def list_tasks(status=None, label=None):
+def list_tasks(status=None, label=None, due_date=None):
     tasks = load_tasks()
     for task in tasks:
-        if (status and task["status"] != status) or (label and task["label"] != label):
+        if (status and task["status"] != status) or (label and task["label"] != label or (due_date and datetime.strptime(task["due_date"], '%Y-%m-%d') > due_date)):
             continue
         print(task)
 
