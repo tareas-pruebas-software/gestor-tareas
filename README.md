@@ -19,13 +19,13 @@ El **Gestor de Tareas** es una aplicación de línea de comandos diseñada para 
 1. Clona este repositorio:
    ```bash
    git clone https://github.com/tareas-pruebas-software/gestor-tareas
- ```
+   ```
 
 2. Ejecuta el programa:
 
   ```
   python3 main.py
-
+  ```
 ## Uso
 Una vez ejecutado el programa, aparecerá un menú en la línea de comandos con las siguientes opciones:
 
