@@ -27,6 +27,16 @@ def main():
                 title = input("Título de la tarea: ")
                 description = input("Descripción: ")
                 due_date = input("Fecha de vencimiento (YYYY-MM-DD): ")
+
+                # Validar formato de fecha
+                while (due_date):
+                    try:
+                        datetime.strptime(due_date, '%Y-%m-%d')
+                        break
+                    except ValueError:
+                        print("Formato de fecha inválido, use YYYY-MM-DD.")
+                        due_date = input("Fecha de vencimiento (YYYY-MM-DD): ")
+
                 label = input("Etiqueta: ")
                 task_manager.add_task(title, description, due_date, label)
                 logging.info(f"Tarea '{title}' añadida por {username}.")
@@ -53,6 +63,16 @@ def main():
                 title = input("Título de la tarea a actualizar: ")
                 new_status = input("Nuevo estado (pending, in_progress, completed) o presione Enter: ")
                 new_due_date = input("Nueva fecha de vencimiento (YYYY-MM-DD) o presione Enter: ")
+
+                # Validar formato de fecha
+                while (new_due_date):
+                    try:
+                        datetime.strptime(new_due_date, '%Y-%m-%d')
+                        break
+                    except ValueError:
+                        print("Formato de fecha inválido, use YYYY-MM-DD.")
+                        new_due_date = input("Nueva fecha de vencimiento (YYYY-MM-DD) o presione Enter: ")
+
                 new_label = input("Nueva etiqueta o presione Enter: ")
                 task_manager.update_task(title, new_status, new_due_date, new_label)
                 logging.info(f"Tarea '{title}' actualizada por {username}.")
