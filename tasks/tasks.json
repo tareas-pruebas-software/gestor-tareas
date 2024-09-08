@@ -1,1 +1,9 @@
-[]
+[
+    {
+        "title": "Tarea para ver filtro",
+        "description": "filtro de fecha",
+        "due_date": "2024-09-12",
+        "label": "Importante",
+        "status": "pending"
+    }
+]

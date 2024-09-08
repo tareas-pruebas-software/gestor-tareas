@@ -1,6 +1,6 @@
 import json
 import os
-import datetime
+from datetime import datetime
 
 TASKS_FILE = "tasks/tasks.json"
 ARCHIVED_TASKS_FILE = "tasks/archived_tasks.json"
