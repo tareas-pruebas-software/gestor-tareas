@@ -62,6 +62,13 @@ def main():
             elif option == "3":
                 title = input("Título de la tarea a actualizar: ")
                 new_status = input("Nuevo estado (pending, in_progress, completed) o presione Enter: ")
+
+                # Validar formato estado
+                while (new_status):
+                    if new_status not in ["pending", "in_progress", "completed"]:
+                        print("Por favor ingrese estado pending, in_progress o completed.")
+                        new_status = input("Nuevo estado (pending, in_progress, completed) o presione Enter: ")
+
                 new_due_date = input("Nueva fecha de vencimiento (YYYY-MM-DD) o presione Enter: ")
 
                 # Validar formato de fecha
